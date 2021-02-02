@@ -11,6 +11,7 @@ pipeline {
     stage('Build') {
       agent any
       steps {
+        tool(name: 'nodejs', type: 'nodejs')
         sh 'cd mycafe && npm install && npm run build'
       }
     }
